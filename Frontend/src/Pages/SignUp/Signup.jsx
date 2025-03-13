@@ -102,7 +102,7 @@ const SignUp = () => {
               />
             </div>
             <div className="col-12 mb-4">
-              <button type="submit" className="signup-btn">Sign Up</button>
+              <button type="submit" className="submit-btn">Sign Up</button>
             </div>
           </form>
           <p>

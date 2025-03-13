@@ -77,7 +77,7 @@ const Login = () => {
             </div>
             {errorMessage && <div className="text-danger mb-3">{errorMessage}</div>}
             <div className="col-12 mb-4">
-              <button type="submit" className="signup-btn">Login</button>
+              <button type="submit" className="submit-btn">Login</button>
             </div>
           </form>
           <p>
