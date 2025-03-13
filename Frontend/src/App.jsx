@@ -7,7 +7,7 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import Signup from "./Pages/SignUp/Signup";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
-import Login from "./Pages/LogIn/login";
+import Login from "./Pages/Login/Login";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Ambulance from "./Pages/Ambulance/Ambulance";
 import Police from "./Pages/Police/Police";
