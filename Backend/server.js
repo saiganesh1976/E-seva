@@ -12,9 +12,10 @@ const port=4000;
 
 app.use(express.json());
 app.use(cors({
-    origin: "http://localhost:5173", // Allow only your frontend
-    credentials: true,  // Allow cookies, authorization headers, etc.
-  }));
+  origin: ['https://e-seva-1.onrender.com', 'http://localhost:5173'], // Allow both frontend URLs
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true // Allow cookies & authentication headers
+}));
 
 connectDB();
 
