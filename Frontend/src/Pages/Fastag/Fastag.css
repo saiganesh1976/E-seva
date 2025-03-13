@@ -1,0 +1,247 @@
+/* General Styles */
+.fastag-container {
+  padding-top: 70px;
+  color: var(--text-color);
+  background-color: var(--theme);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Banner Section */
+.fastag-banner {
+  background: url("/assets/Images/FASTag/fastag-banner.png") no-repeat center
+    center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  width: 100%;
+}
+
+.fastag-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.fastag-banner h2,
+.fastag-banner p,
+.fastag-buttons {
+  position: relative;
+  z-index: 1;
+}
+
+.fastag-banner h2 {
+  font-size: 2.5rem;
+}
+
+.fastag-banner p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.fastag-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #00a896;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #00796b;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+/* FASTag Info Section */
+.fastag-info {
+  padding: 40px 20px;
+  background: #1b1b1b;
+  text-align: center;
+  width: 100%;
+}
+
+.fastag-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00a896;
+}
+
+.fastag-info p {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.5;
+}
+
+/* Benefits Section */
+.fastag-benefits {
+  padding: 50px 20px;
+  background: #181818;
+  text-align: center;
+  width: 100%;
+}
+
+.fastag-benefits h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00a896;
+}
+
+.benefit-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.benefit {
+  background: #282828;
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.benefit:hover {
+  background: #333;
+}
+
+.icon {
+  font-size: 3.5rem;
+  color: #00a896;
+  margin-bottom: 10px;
+}
+
+.benefit p {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-top: 10px;
+}
+
+/* Apply Section */
+.apply-section {
+  padding: 40px 20px;
+  background: #1b1b1b;
+  text-align: center;
+  width: 100%;
+}
+
+.apply-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00a896;
+}
+
+.apply-section p {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .fastag-banner h2 {
+    font-size: 2rem;
+  }
+
+  .fastag-banner p {
+    font-size: 1rem;
+  }
+
+  .benefit {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fastag-banner {
+    padding: 60px 15px;
+  }
+
+  .fastag-banner h2 {
+    font-size: 1.8rem;
+  }
+
+  .fastag-banner p {
+    font-size: 1rem;
+  }
+
+  .benefit-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit {
+    width: 80%;
+  }
+
+  .fastag-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fastag-banner {
+    padding: 40px 10px;
+  }
+
+  .fastag-banner h2 {
+    font-size: 1.5rem;
+  }
+
+  .fastag-banner p {
+    font-size: 0.9rem;
+  }
+
+  .benefit {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .fastag-info,
+  .apply-section {
+    padding: 30px 10px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}

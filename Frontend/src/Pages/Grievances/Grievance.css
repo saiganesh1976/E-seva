@@ -1,71 +1,133 @@
+/* Grievance Container */
 .grievance-container {
-  padding: 30px;
-  height: 100vh;
+  padding: 110px 40px;
+  min-height: 100vh;
   background-color: var(--theme);
-}
-.grievance-form {
-  margin: 40px auto;
-  border: 2px solid #86ead4;
-  color: var(--links);
-  border-radius: 8px;
-  max-width: 800px;
-  padding: 40px;
-}
-
-@media screen and (max-width: 768px) {
-  .grievance-container {
-    margin: 20px;
-    padding: 20px;
-  }
-}
-
-.grievance-title {
-  text-align: center;
-  margin-top: 90px;
-}
-
-.grievance-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
 }
 
+/* Title & Subtitle */
+.grievance-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--links);
+  margin-bottom: 10px;
+}
+
+.grievance-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--footer-links);
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/* Grievance Form */
+.grievance-form {
+  width: 100%;
+  max-width: 700px;
+  /* background: rgba(255, 255, 255, 0.1); */
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid #86ead4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Row */
 .form-row {
   display: flex;
   gap: 15px;
 }
 
-.form-row .input-field,
-.form-row select,
-.form-row .textarea-field {
+/* Input Fields */
+.input-field, 
+.textarea-field, 
+select {
   flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 5px;
-  background-color: var(--theme);
+  background: transparent;
   color: var(--white);
+  font-size: 1rem;
 }
 
+/* Placeholder Styling */
 .input-field::placeholder,
 .textarea-field::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
 }
 
+/* Focus Effect */
 .input-field:focus,
 .textarea-field:focus {
   border-color: #86ead4;
   outline: none;
-  background-color: var(--theme);
-  color: var(--links);
+  background: rgba(255, 255, 255, 0.05);
 }
 
+/* Textarea */
+.textarea-field {
+  resize: none;
+}
+
+/* Submit Button */
 .submit-btn {
-  width: 100px;
-  padding: 8px;
+  width: 120px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #86ead4;
+  color: var(--black);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 600px) {
+.submit-btn:hover {
+  background: var(--links);
+  color: var(--white);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
   .form-row {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .grievance-title {
+    font-size: 2rem;
+  }
+
+  .grievance-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .grievance-form {
+    padding: 75px 20px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grievance-title {
+    font-size: 1.8rem;
+  }
+
+  .grievance-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 }

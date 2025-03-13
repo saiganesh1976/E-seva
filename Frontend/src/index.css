@@ -6,7 +6,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -18,59 +18,71 @@ a{
   --links: #86ead4;
   --footer-links: grey;
 }
+
 h1 {
   color: var(--links);
+  font-size: 2rem;
+  text-align: center;
 }
+
 /* Text Animation */
 #typing-container {
   padding: 20px;
   display: inline-block;
 }
+
 #cursor {
   font-size: 2rem;
   animation: blinkCursor 1s infinite;
 }
+
+/* Buttons */
 .submit-btn {
-  border: 2px solid #86ead4;
+  border: 2px solid var(--links);
   color: var(--links);
   background-color: var(--theme);
   border-radius: 5px;
   cursor: pointer;
+  padding: 10px 20px;
   transition: background-color 0.3s ease-in-out;
 }
+
 .submit-btn:hover {
-  border: 2px solid #fff;
+  border: 2px solid var(--white);
   color: var(--white);
 }
 
 .general-btn {
-  border: 2px solid white;
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 1em;
+  background: #00a896;
   color: white;
-  background-color: red;
+  font-weight: bold;
   border-radius: 5px;
-  cursor: pointer;
-  padding:5px 20px;
-  transition: background-color 0.3s ease-in-out;
-}
-.general-btn:hover {
-  border: 2px solid #fff;
-  color: var(--white);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
 }
 
+.general-btn:hover {
+  background: #00796b;
+}
+
+/* Animations */
 @keyframes blinkCursor {
-  0% {
+  0%, 100% {
     opacity: 1;
   }
   50% {
     opacity: 0;
   }
-  100% {
-    opacity: 1;
-  }
 }
+
 .fadeInUp {
   animation: fadeInUp 1.5s normal;
 }
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -79,5 +91,39 @@ h1 {
   100% {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .submit-btn, .general-btn {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  .submit-btn, .general-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  #typing-container {
+    padding: 10px;
+  }
+  .submit-btn, .general-btn {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 }

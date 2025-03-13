@@ -1,65 +1,224 @@
-/* Footer CSS */
+/* Footer Wrapper */
 .footer-wrapper {
-    height: 45vh;
-    background-color: var(--black);
-  }
+  background-color: var(--black);
+  padding: 40px 0;
+  color: var(--footer-links);
+}
+
+/* Footer Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem 5vw;
+  text-align: center;
+}
+
+/* Logo & Title */
+.footer-text {
+  text-align: center;
+}
+
+.footer-text img {
+  width: 90px;
+  height: 90px;
+}
+
+.footer-text p {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--links);
+}
+
+/* About Section */
+.about-section {
+  max-width: 280px;
+  text-align: left;
+}
+
+.about-section h4 {
+  font-size: 1.2rem;
+  color: var(--links);
+}
+
+.about-section p {
+  font-size: 0.9rem;
+  color: var(--footer-links);
+  line-height: 1.4;
+}
+
+/* Safety Icon */
+.safety-icon img {
+  width: 130px;
+  height: auto;
+}
+
+/* Footer Links */
+.footer-links {
+  text-align: left;
+}
+
+.footer-links h4,
+.handles h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--links);
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul a {
+  text-decoration: none;
+  color: var(--footer-links);
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links ul a:hover {
+  color: var(--links);
+}
+
+/* Social Media Icons */
+.handles {
+  text-align: left;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background 0.3s ease-in-out;
+}
+
+
+/* Footer Credits */
+.credits {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.credits ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.credits ul li {
+  font-size: 0.9rem;
+}
+
+.credits ul a {
+  text-decoration: none;
+  color: var(--links);
+  transition: color 0.3s ease-in-out;
+}
+
+.credits ul a:hover {
+  color: var(--white);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
   .container {
-    padding: 2rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-  }
-  @media screen and (max-width: 768px) {
-    .footer-wrapper {
-      height: auto;
-    }
-    .container {
-      display: block;
-      align-items: center;
-      text-align: center;
-    }
-  }
-  .footer-text {
-    text-align: center;
-    color: var(--footer-links);
-    font-size: 2rem;
-  }
-  .footer-links h4,
-  .handles h4 {
-    color: var(--footer-links);
-  }
-  .footer-links ul {
-    list-style-type: none;
-  }
-  .footer-links ul a {
-    text-decoration: none;
-    color: var(--footer-links);
-  }
-  .footer-links ul a:hover {
-    color: var(--links);
-  }
-  .handles > svg {
-    margin: 10px;
-  }
-  .credits ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .social-icons {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
   }
-  @media screen and (max-width: 768px) {
-    .credits ul {
-      list-style-type: none;
-      display: block;
-      text-align: center;
-    }
+
+  .footer-text p {
+    font-size: 1.5rem;
   }
-  .credits ul a {
-    text-decoration: none;
-    color: var(--links);
+
+  .about-section {
+    text-align: center;
+    max-width: 100%;
+    padding: 10px;
   }
-  
+
+  .footer-links h4,
+  .handles h4 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-wrapper {
+    padding: 30px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-text p {
+    font-size: 1.3rem;
+  }
+
+  .about-section {
+    font-size: 0.9rem;
+  }
+
+  .footer-links ul li {
+    margin: 8px 0;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+  }
+
+  .credits ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-text p {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .credits ul {
+    gap: 8px;
+  }
+}

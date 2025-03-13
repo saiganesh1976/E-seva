@@ -15,7 +15,6 @@ import Petrol from "./Pages/Petrol/Petrol";
 import Bloodbank from "./Pages/Bloodbank/Bloodbank";
 import Fastag from "./Pages/Fastag/Fastag";
 import Fire from "./Pages/Fire/Fire";
-import NearestHospitals from "./Pages/NearestHospitals/NearestHospitals";
 import FindHospital from "./Pages/FindHospital/FindHospital";
 
 const App = () => {
@@ -24,7 +23,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/grievences" element={<Grievances />} />
+        <Route path="/grievances" element={<Grievances />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/userProfile" element={<Dashboard />} />
@@ -36,7 +35,6 @@ const App = () => {
         <Route path="/bloodbank" element={<Bloodbank/>}/>
         <Route path="/fastag" element={<Fastag/>}/>
         <Route path="/fire" element={<Fire/>}/>
-        {/* <Route path="/nearestHospitals" element={<NearestHospitals/>}/> */}
         <Route path="/findHospital" element={<FindHospital/>}/>
 
       </Routes>

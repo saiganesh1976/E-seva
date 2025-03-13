@@ -1,9 +1,52 @@
-/* Carousel CSS */
+:root {
+  --theme2: #0d1520;
+}
+
+/* Carousel Container */
 .carousel {
-    height: 60vh;
-    background-color: var(--theme2);
+  background-color: var(--theme2);
+  height: 60vh;
+}
+
+/* Carousel Images */
+.carousel-image {
+  height: 60vh;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .carousel {
+    height: 50vh;
   }
+
   .carousel-image {
-    height: 60vh;
+    height: 50vh;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 40vh;
+  }
+
+  .carousel-image {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 30vh;
+  }
+
+  .carousel-image {
+    height: 30vh;
+  }
+
+  /* Adjust navigation arrows for small screens */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+  }
+}

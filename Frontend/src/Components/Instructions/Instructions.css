@@ -1,32 +1,89 @@
-/* Instructions CSS */
 .instructions-wrapper {
-    background-color: var(--theme);
-    color: var(--color1);
-    padding: 40px;
-  }
-  .instructions-wrapper h1 {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  .instructions-main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    color: var(--white);
-  }
-  .instructions-main-img {
-    text-align: center;
-  }
-  @media screen and (max-width: 768px) {
-    .instructions-main {
-      display: block;
-    }
-  }
-  .instructions-main p {
-    text-align: justify;
-  }
-  .instructions-main ol {
-    padding-left: 2rem;
+  background-color: var(--theme);
+  color: var(--white);
+  text-align: center;
+}
+
+/* Heading */
+.instructions-wrapper h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Flexbox layout */
+.instructions-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  text-align: justify;
+}
+
+/* Image Styling */
+.instructions-main-img img {
+  max-width: 100%;
+  width: 500px;
+}
+
+/* Instructions content */
+.instructions-content {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+/* Ordered List Styling */
+.instructions-content ol {
+  padding-left: 1.5rem;
+}
+
+.instructions-content ol li {
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .instructions-wrapper {
+    padding: 50px 8vw;
   }
   
+  .instructions-main {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .instructions-wrapper {
+    padding: 40px 5vw;
+  }
+  
+  .instructions-main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .instructions-main-img img {
+    width: 80%;
+  }
+  
+  .instructions-content {
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .instructions-wrapper {
+    padding: 30px 3vw;
+  }
+  
+  .instructions-wrapper h1 {
+    font-size: 1.6rem;
+  }
+  
+  .instructions-main-img img {
+    width: 90%;
+  }
+
+  .instructions-content {
+    font-size: 1rem;
+  }
+}

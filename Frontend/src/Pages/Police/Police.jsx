@@ -1,5 +1,6 @@
-import React from 'react'
-import './Police.css'
+import React from "react";
+import "./Police.css";
+import { FaPhoneAlt, FaInstagram, FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const policeServices = [
   { title: "File a Case", image: "/assets/Images/police/fir.jpg" },
@@ -19,9 +20,11 @@ const Police = () => {
       <div className="police-header-wrapper">
         <div className="page-header police">
           <h2>Police Services</h2>
-          <p style={{ color: "#fff" }}>Call Us Now for Emergency Services</p>
+          <p>Call Us Now for Emergency Services</p>
           <button className="general-btn">
-            <a href="tel:+91 63052 79018">Dial 100</a>
+            <a href="tel:100">
+              <FaPhoneAlt /> Dial 100
+            </a>
           </button>
         </div>
       </div>
@@ -42,20 +45,39 @@ const Police = () => {
           <div className="police-animate-section">
             <div className="animation-section">
               <img src="/assets/Images/police/policevan.png" alt="Police Van" />
-              <span>Any Emergency Call: 100</span>
+              <span>Emergency? Call 100</span>
             </div>
           </div>
 
           <h1>May I help you?</h1>
 
           {/* Police Service Cards */}
-          <div className="row gallery-section fadeInUp">
+          <div className="gallery-section">
             {policeServices.map((service, index) => (
-              <div className="card" key={index} style={{ width: "18rem" }}>
-                <img src={service.image} className="card-img-top" alt={service.title} />
+              <div className="card" key={index}>
+                <img src={service.image} alt={service.title} />
                 <p>{service.title}</p>
               </div>
             ))}
+          </div>
+
+          {/* Emergency Services Section */}
+          <div className="emergency-services">
+            <h2>Emergency Police Assistance</h2>
+            <p>
+              The police department offers 24/7 emergency services to ensure the safety and security of the public. 
+              In case of any crime, accident, or distress situation, you can seek immediate help through the helpline numbers.
+            </p>
+            <ul>
+              <li><strong>Crime Reporting:</strong> File complaints about theft, robbery, or any criminal activity.</li>
+              <li><strong>Immediate Rescue:</strong> Police assistance for road accidents, mob violence, or fire outbreaks.</li>
+              <li><strong>Women and Child Safety:</strong> Special teams for the protection of women and children in distress.</li>
+              <li><strong>Traffic Control:</strong> Instant help for road accidents and traffic violations.</li>
+              <li><strong>Cyber Crime Assistance:</strong> Support for online fraud, hacking, and cyberbullying cases.</li>
+            </ul>
+            <p>
+              <strong>Remember:</strong> If you are in danger, do not hesitate to Dial 100 or visit your nearest police station.
+            </p>
           </div>
 
           {/* Emergency Numbers Section */}
@@ -63,23 +85,24 @@ const Police = () => {
             <h2>Emergency Numbers</h2>
             <div className="police-numbers-section">
               <div className="numbers">
-                <p>Dial : 100</p>
-                <p>Women Cell : +91 123 456 7890</p>
-                <p>Control Room (M) : +91 123 456 7890</p>
-                <p>Control Room (L) : +91 123 456 7890</p>
+                <p><FaPhoneAlt /> Dial: <strong>100</strong> (General Police Helpline)</p>
+                <p><FaPhoneAlt /> Women Helpline: <strong>+91 98765 43210</strong></p>
+                <p><FaPhoneAlt /> Cyber Crime: <strong>+91 98765 43213</strong></p>
+                <p><FaPhoneAlt /> Traffic Control: <strong>+91 98765 43214</strong></p>
               </div>
               <div className="police-social">
-                <p>Instagram</p>
-                <p>Facebook</p>
-                <p>Twitter</p>
-                <p>YouTube</p>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /> SafeCityPolice</a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /> ShieldForceHQ</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /> RapidResponse</a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /> LawGuardians</a>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Police
+export default Police;

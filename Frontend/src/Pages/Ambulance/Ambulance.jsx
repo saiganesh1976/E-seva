@@ -1,61 +1,3 @@
-// import React from "react";
-// import "./Ambulance.css";
-// import { Link } from "react-router-dom";
-
-// const [nearestHospitalLink, setNearestHospitalLink] = useState("#");
-
-// const handleButton = () => {
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(
-//       (position) => {
-//         const latitude = position.coords.latitude;
-//         const longitude = position.coords.longitude;
-//         setNearestHospitalLink(
-//           `https://www.google.com/maps/search/nearest+hospitals/@${latitude},${longitude},15z`
-//         );
-//       },
-//       (error) => {
-//         console.error("Error getting location", error);
-//         alert("Unable to fetch location. Please enable GPS.");
-//       }
-//     );
-//   } else {
-//     alert("Geolocation is not supported by this browser.");
-//   }
-// };
-
-// const Ambulance = () => {
-//   return (
-//     <div className="ambulance-container">
-//       <header className="ambulance-header">
-//         <h2 className="header-title">Ambulance Services</h2>
-//         <p className="header-description">
-//           Call Us Now for Emergency Ambulance Services
-//         </p>
-//         <div className="header-buttons">
-//           <button className="general-btn">
-//             <a href="tel:+91 63052 79018">Dial 108</a>
-//           </button>
-//           <button className="general-btn" onClick={handleButton}>
-//             <a
-//               href={nearestHospitalLink}
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               Nearest Hospitals
-//             </a>
-//           </button>
-//           <button className="general-btn">
-//             <Link to="/findHospital">Find Hospital</Link>
-//           </button>
-//         </div>
-//       </header>
-
-//     </div>
-//   );
-// };
-
-// export default Ambulance;
 import React, { useState } from "react";
 import "./Ambulance.css";
 import { Link } from "react-router-dom";
@@ -77,7 +19,7 @@ const ambulanceServices = [
     title: "Advanced Life Support",
     description:
       "ALS is also called a mobile ICU, carrying advanced medical equipment and medications for critically ill patients.",
-    image: "/assets/Images/ambulance/BLS.png",
+    image: "/assets/Images/ambulance/ALS.png",
   },
   {
     title: "Rapid Organ Recovery Ambulance",
@@ -94,14 +36,13 @@ const ambulanceServices = [
 ];
 
 const Ambulance = () => {
-  const [nearestHospitalLink, setNearestHospitalLink] = useState();
+  const [nearestHospitalLink, setNearestHospitalLink] = useState("#");
 
   const handleButton = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          const latitude = position.coords.latitude;
-          const longitude = position.coords.longitude;
+          const { latitude, longitude } = position.coords;
           setNearestHospitalLink(
             `https://www.google.com/maps/search/nearest+hospitals/@${latitude},${longitude},15z`
           );
@@ -118,6 +59,7 @@ const Ambulance = () => {
 
   return (
     <div className="ambulance-container">
+      {/* Header Section */}
       <header className="ambulance-header">
         <h2 className="header-title">Ambulance Services</h2>
         <p className="header-description">
@@ -128,11 +70,7 @@ const Ambulance = () => {
             <a href="tel:+91 63052 79018">Dial 108</a>
           </button>
           <button className="general-btn" onClick={handleButton}>
-            <a
-              href={nearestHospitalLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={nearestHospitalLink} target="_blank" rel="noopener noreferrer">
               Nearest Hospitals
             </a>
           </button>
@@ -141,14 +79,14 @@ const Ambulance = () => {
           </button>
         </div>
       </header>
+
+      {/* Services Section */}
       <section className="services-section">
         <h1 className="section-title">Our Services</h1>
         <div className="services-list">
           {ambulanceServices.map((service, index) => (
             <div
-              className={`service-item ${
-                index % 2 === 0 ? "service-odd" : "service-even"
-              }`}
+              className={`service-item ${index % 2 === 0 ? "service-odd" : "service-even"}`}
               key={index}
             >
               <div className="service-image">

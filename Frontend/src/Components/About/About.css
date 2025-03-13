@@ -1,33 +1,91 @@
-/* About CSS */
+:root {
+  --theme: #0d1520;
+  --white: #ffffff;
+  --links: #86ead4;
+}
+
 .about {
-    background-color: var(--theme);
-    padding: 120px;
-    height: auto;
-    color: var(--white);
-  }
-  @media screen and (max-width: 768px) {
-    .about {
-      padding: 40px;
-    }
-    .instructions-main-img img {
-      width: 320px;
-    }
-    .instructions-wrapper {
-      padding: 20px;
-    }
-    .instructions-main ol {
-      padding-left: 1rem;
-    }
-  }
-  .about h1 {
-    color: var(--links);
-    text-align: center;
-    padding: 10px;
-  }
-  .about p {
-    padding: 20px 18px;
-    text-align: center;
-    font-size: 18px;
-    text-align: justify;
+  background-color: var(--theme);
+  padding: 100px 15vw;
+  color: var(--white);
+  text-align: center;
+}
+
+/* Adjust quote styling */
+.about-quote {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Headings */
+.about-heading {
+  color: var(--links);
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+/* Paragraph styling */
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: justify;
+  padding: 0 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .about {
+    padding: 80px 10vw;
   }
   
+  .about-quote {
+    font-size: 1.3rem;
+  }
+  
+  .about-heading {
+    font-size: 1.8rem;
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 50px 5vw;
+  }
+  
+  .about-quote {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-heading {
+    font-size: 1.6rem;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 40px 3vw;
+  }
+  
+  .about-quote {
+    font-size: 1.1rem;
+  }
+  
+  .about-heading {
+    font-size: 1.4rem;
+  }
+  
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}

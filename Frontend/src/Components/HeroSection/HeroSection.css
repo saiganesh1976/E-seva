@@ -1,52 +1,112 @@
 .main {
-    padding: 80px 0px;
-    height: 100vh;
-    background-color: var(--theme);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-  }
-  .main-image img {
-    width: 100%;
-    max-width: 850px;
-    height: auto;
-  }
-  .main-head {
-    padding: 30px;
-  }
+  height: 100vh;
+  background-color: var(--theme);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  /* padding: 5vw; */
+  gap: 20px;
+}
+
+/* Image Styling */
+.main-image {
+  flex: 1;
+  text-align: center;
+}
+
+.main-image img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+/* Content Styling */
+.main-head {
+  flex: 1;
+  text-align: left;
+  padding: 30px;
+}
+
+.main h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.main span {
+  font-weight: 700;
+  color: var(--links);
+}
+
+.main-body {
+  font-size: 1.2rem;
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  /* .main {
+    padding: 5vw;
+  } */
+
   .main h1 {
-    font-size: 5rem;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-size: 3rem;
+  }
+
+  .main-body {
+    font-size: 1rem;
+  }
+
+  .main-image img {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    /* padding: 40px 5vw; */
+  }
+
+  .main-head {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .main h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-body {
+    font-size: 1rem;
     text-align: center;
   }
-  .main span {
-    font-weight: 700;
-    color: var(--links);
+
+  .main-image img {
+    max-width: 90%;
+    margin-top: 20px;
   }
+}
+
+@media screen and (max-width: 480px) {
+  /* .main {
+    padding: 30px 5vw;
+  } */
+
+  .main h1 {
+    font-size: 2rem;
+  }
+
   .main-body {
-    color: #fff;
-    text-align: right;
+    font-size: 0.9rem;
   }
-  @media screen and (max-width: 768px) {
-    .main {
-      display: block;
-    }
-    .main-head {
-      padding: 20px;
-    }
-    .main-image img {
-      translate: 0px 20px;
-      width: 100vw;
-    }
-    .main h1 {
-      font-size: 2.5rem;
-      font-weight: 400;
-    }
-    .main-body {
-      font-size: 14px;
-      text-align: center;
-    }
+
+  .main-image img {
+    max-width: 100%;
   }
+}

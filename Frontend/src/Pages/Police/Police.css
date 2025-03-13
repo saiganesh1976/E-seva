@@ -1,22 +1,65 @@
+/* Main Container */
 .police-container {
-    padding-top: 70px;
-    color: var(--text-color);
-    background-color: var(--theme);
-    display: flex;
-    flex-direction: column;
-}
-
-.police-header-wrapper {
-  color: var(--white);
-  background-image: url("/assets/Images/police/police-banner.png");
-  padding: 120px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
+  padding-top: 70px;
+  color: var(--text-color);
+  background-color: var(--theme);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  height: 60vh;
+}
+
+/* Header Section */
+.police-header-wrapper {
+  background: url("/assets/Images/police/police-banner.png") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.police-header-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.police-header-wrapper h2,
+.police-header-wrapper p,
+.police-header-wrapper button {
+  position: relative;
+  z-index: 1;
+}
+
+.police-header-wrapper h2 {
+  font-size: 2.5rem;
+}
+
+.police-header-wrapper p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Call Button */
+.general-btn a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+.general-btn {
+  background-color: red;
+  padding: 12px 25px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.general-btn:hover {
+  background-color: darkred;
 }
 
 /* Animation Section */
@@ -56,76 +99,127 @@
   .animation-section img {
     width: 200px;
   }
-  .animation-section {
-    width: 0px;
-    left: 20%;
-    position: relative;
-    animation: police 3s linear infinite 1s;
-  }
-  @keyframes police {
-    0% {
-      right: 0px;
-    }
-    100% {
-      left: 0%;
-    }
-  }
 }
 
 /* Police Service Cards */
-.row.gallery-section {
+.gallery-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   margin-top: 40px;
-}
-
-@media screen and (max-width: 768px) {
-  .row.gallery-section {
-    display: block;
-  }
-}
-
-.card {
-  padding: 20px;
-  color: #fff;
-  background-color: transparent;
-  border: 3px solid var(--links);
   text-align: center;
 }
 
-.card p {
-  color: var(--white);
-  font-weight: 600;
+.card {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--links);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
+  border-radius: 10px;
+}
+
+.card p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+/* Emergency Services Section */
+.emergency-services {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border-left: 5px solid red;
+  text-align: left;
+}
+
+.emergency-services h2 {
+  font-size: 2rem;
+  color: red;
+  margin-bottom: 15px;
+}
+
+.emergency-services p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.emergency-services ul {
+  padding-left: 20px;
+}
+
+.emergency-services ul li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  list-style-type: square;
 }
 
 /* Emergency Numbers */
 .police-numbers {
-  margin: 40px;
-  color: var(--links);
+  margin-top: 50px;
+  text-align: center;
+}
+
+.numbers {
+  margin-top: 20px;
+  text-align: left;
 }
 
 .police-numbers-section {
-  padding: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
+/* Social Media Icons */
+.police-social {
+  display: flex;
+  flex-direction: column;
+}
+
+.police-social a {
+  font-size: 1.4rem;
+  text-align: left;
+  color: white;
+  margin: 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.police-social a:hover {
+  color: var(--links);
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   .police-numbers-section {
-    padding: 20px;
-    display: block;
+    flex-direction: column;
+    text-align: center;
   }
-}
 
-/* Social Links */
-.police-social p {
-  font-weight: 600;
+  .emergency-services {
+    padding: 15px;
+  }
+
+  .emergency-services h2 {
+    font-size: 1.8rem;
+  }
+
+  .emergency-services p,
+  .emergency-services ul li {
+    font-size: 1rem;
+  }
 }

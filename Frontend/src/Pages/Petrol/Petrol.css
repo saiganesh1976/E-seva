@@ -1,0 +1,187 @@
+/* General Styles */
+.petrol-container {
+  padding-top: 70px;
+  color: var(--text-color);
+  background-color: var(--theme);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+.petrol-header-wrapper {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.petrol-header-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.page-header {
+  position: relative;
+  z-index: 1;
+}
+
+.page-header h2 {
+  font-size: 2.5rem;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Services Section */
+.services-petrol {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--white);
+  gap: 20px;
+}
+
+.services-petrol div {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.petrol-img {
+  width: 100px;
+  height: auto;
+}
+
+/* Booking Section */
+.petrol-booking {
+  margin-top: 40px;
+  padding: 20px;
+  border: 2px solid #86ead4;
+  border-radius: 16px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.petrol-booking p {
+  color: var(--white);
+}
+
+.petrol-booking .btn {
+  margin-top: 20px;
+}
+
+.tc-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 30px;
+  color: white;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* T&C Content - Responsive */
+.tc-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.tc-content div {
+  margin: 20px;
+}
+
+.tc-content img {
+  width: 100%;
+  max-width: 350px;
+}
+
+/* T&C Header */
+.tc-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* T&C List */
+.tc-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 18px;
+}
+
+.tc-list li {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.tc-list li:last-child {
+  border-bottom: none;
+}
+
+/* ✅ Full Responsive Design */
+@media screen and (max-width: 1024px) {
+  /* Adjust T&C Layout */
+  .tc-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tc-content img {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Services - Stack on small screens */
+  .services-petrol {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-petrol div {
+    width: 100%;
+  }
+
+  .petrol-img {
+    width: 80px;
+  }
+
+  /* T&C Box */
+  .tc-box {
+    padding: 15px;
+  }
+
+  .tc-content img {
+    max-width: 200px;
+  }
+
+  .tc-list {
+    font-size: 16px;
+  }
+
+  .page-header h2 {
+    font-size: 2rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+}

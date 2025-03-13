@@ -1,48 +1,114 @@
+/* Wrapper Section */
+.wrapper-section {
+  text-align: center;
+  padding: 110px 20px;
+  background-color: var(--theme);
+}
+
+/* Title */
+.title h1 {
+  font-size: 2.5rem;
+  color: var(--links);
+  margin-bottom: 20px;
+}
+
+/* Contact Section */
 .contact-section {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   background-color: var(--theme);
   border-radius: 8px;
   border: 2px solid #86ead4;
-  padding: 20px;
-  margin: 40px 150px;
+  padding: 30px;
+  margin: 40px 10%;
+  gap: 30px;
 }
 
+/* Contact Details */
 .contact {
   display: flex;
   flex-direction: column;
-  padding: 60px;
+  gap: 20px;
+  padding: 20px;
 }
 
-.right {
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width: 768px) {
-  .contact {
-    padding: 30px;
-  }
-  .contact-section {
-    display: block;
-    padding: 20px;
-    margin: 0px 40px;
-  }
-}
-
+/* Contact Items */
 .contact-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 15px;
   color: var(--links);
+  font-size: 1.2rem;
 }
 
-.contact-item .call-left {
-  font-size: 1.5rem;
+/* Icon Styling */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(58, 175, 169, 0.2);
+  transition: background-color 0.3s ease-in-out;
 }
 
-.contact-form {
-  color: var(--links);
-  margin: 50px 0px;
+.icon:hover {
+  background-color: rgba(58, 175, 169, 0.5);
+}
+
+/* Contact Text */
+.contact-text p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.contact-text span {
+  font-weight: bold;
+  color: #86ead4;
+}
+
+/* Favicon */
+.favicon-container {
+  text-align: center;
+}
+
+.favicon-img {
+  width: 120px;
+  height: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .title h1 {
+    font-size: 2rem;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 5%;
+  }
+
+  .contact {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-text p {
+    font-size: 1rem;
+  }
 }

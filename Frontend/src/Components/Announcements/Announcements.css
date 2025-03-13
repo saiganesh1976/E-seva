@@ -1,9 +1,60 @@
-.Notice {
-  padding: 10px 0px 30px;
+:root {
+  --black: #1a1a1a;
+  --white: #ffffff;
+  --primary: #ff4c29;
+}
+
+.notice {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  font-size: 1rem;
-  color: var(--white);
-  text-transform: capitalize;
   background-color: var(--black);
+  color: var(--white);
+  font-size: 1.1rem;
   height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Smooth Scrolling Animation */
+.announcement {
+  display: flex;
+  gap: 15px;
+  animation: scrollText 25s linear infinite;
+}
+
+/* New Icon Styling */
+.new-icon {
+  height: 25px;
+  margin: 0 10px;
+}
+
+/* Keyframe Animation for Scrolling */
+@keyframes scrollText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notice {
+    font-size: 1rem;
+    height: auto;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .announcement {
+    flex-wrap: wrap;
+  }
+
+  .new-icon {
+    height: 20px;
+  }
 }
