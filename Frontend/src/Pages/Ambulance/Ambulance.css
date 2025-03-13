@@ -1,0 +1,94 @@
+.ambulance-container {
+  padding-top: 70px;
+  color: var(--text-color);
+  background-color: var(--theme);
+  display: flex;
+  flex-direction: column;
+}
+
+.ambulance-header {
+  background-image: url(/assets/Images/ambulance-banner.png);
+  padding: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 60vh;
+}
+
+.header-title {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.header-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.services-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.section-title {
+  margin-bottom: 40px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  border: 2px solid var(--links);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--white);
+}
+
+.service-odd {
+  flex-direction: row;
+}
+
+.service-even {
+  flex-direction: row-reverse;
+}
+
+.service-image img {
+  width: 350px;
+  transition: all 2s ease-in-out;
+}
+
+.service-odd:hover .service-image img {
+  translate: 150%;
+}
+.service-even:hover .service-image img {
+    translate: -150%;
+  }
+
+.service-details {
+  flex: 1;
+  text-align: left;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .service-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}

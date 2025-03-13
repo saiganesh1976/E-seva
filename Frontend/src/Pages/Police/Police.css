@@ -1,0 +1,131 @@
+.police-container {
+    padding-top: 70px;
+    color: var(--text-color);
+    background-color: var(--theme);
+    display: flex;
+    flex-direction: column;
+}
+
+.police-header-wrapper {
+  color: var(--white);
+  background-image: url("/assets/Images/police/police-banner.png");
+  padding: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 60vh;
+}
+
+/* Animation Section */
+.animation-section {
+  width: 400px;
+  left: 50%;
+  position: relative;
+  animation: police 6s linear infinite 1s;
+}
+
+.animation-section img {
+  width: 400px;
+}
+
+.animation-section span {
+  color: red;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Animation Keyframes */
+@keyframes police {
+  0% {
+    right: 0px;
+  }
+  100% {
+    left: 0%;
+    right: 100%;
+  }
+}
+
+/* Responsive Animation */
+@media screen and (max-width: 768px) {
+  .animation-section span {
+    display: none;
+  }
+  .animation-section img {
+    width: 200px;
+  }
+  .animation-section {
+    width: 0px;
+    left: 20%;
+    position: relative;
+    animation: police 3s linear infinite 1s;
+  }
+  @keyframes police {
+    0% {
+      right: 0px;
+    }
+    100% {
+      left: 0%;
+    }
+  }
+}
+
+/* Police Service Cards */
+.row.gallery-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .row.gallery-section {
+    display: block;
+  }
+}
+
+.card {
+  padding: 20px;
+  color: #fff;
+  background-color: transparent;
+  border: 3px solid var(--links);
+  text-align: center;
+}
+
+.card p {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Emergency Numbers */
+.police-numbers {
+  margin: 40px;
+  color: var(--links);
+}
+
+.police-numbers-section {
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .police-numbers-section {
+    padding: 20px;
+    display: block;
+  }
+}
+
+/* Social Links */
+.police-social p {
+  font-weight: 600;
+}

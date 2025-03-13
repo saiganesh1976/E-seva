@@ -1,0 +1,9 @@
+/* Carousel CSS */
+.carousel {
+    height: 60vh;
+    background-color: var(--theme2);
+  }
+  .carousel-image {
+    height: 60vh;
+  }
+  

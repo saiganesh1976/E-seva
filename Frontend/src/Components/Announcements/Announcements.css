@@ -1,0 +1,9 @@
+.Notice {
+  padding: 10px 0px 30px;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--white);
+  text-transform: capitalize;
+  background-color: var(--black);
+  height: 50px;
+}

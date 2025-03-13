@@ -1,0 +1,71 @@
+.grievance-container {
+  padding: 30px;
+  height: 100vh;
+  background-color: var(--theme);
+}
+.grievance-form {
+  margin: 40px auto;
+  border: 2px solid #86ead4;
+  color: var(--links);
+  border-radius: 8px;
+  max-width: 800px;
+  padding: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .grievance-container {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+.grievance-title {
+  text-align: center;
+  margin-top: 90px;
+}
+
+.grievance-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .input-field,
+.form-row select,
+.form-row .textarea-field {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: var(--theme);
+  color: var(--white);
+}
+
+.input-field::placeholder,
+.textarea-field::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-field:focus,
+.textarea-field:focus {
+  border-color: #86ead4;
+  outline: none;
+  background-color: var(--theme);
+  color: var(--links);
+}
+
+.submit-btn {
+  width: 100px;
+  padding: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}

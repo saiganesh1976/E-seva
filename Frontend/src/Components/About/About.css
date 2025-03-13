@@ -1,0 +1,33 @@
+/* About CSS */
+.about {
+    background-color: var(--theme);
+    padding: 120px;
+    height: auto;
+    color: var(--white);
+  }
+  @media screen and (max-width: 768px) {
+    .about {
+      padding: 40px;
+    }
+    .instructions-main-img img {
+      width: 320px;
+    }
+    .instructions-wrapper {
+      padding: 20px;
+    }
+    .instructions-main ol {
+      padding-left: 1rem;
+    }
+  }
+  .about h1 {
+    color: var(--links);
+    text-align: center;
+    padding: 10px;
+  }
+  .about p {
+    padding: 20px 18px;
+    text-align: center;
+    font-size: 18px;
+    text-align: justify;
+  }
+  

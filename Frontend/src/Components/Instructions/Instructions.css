@@ -1,0 +1,32 @@
+/* Instructions CSS */
+.instructions-wrapper {
+    background-color: var(--theme);
+    color: var(--color1);
+    padding: 40px;
+  }
+  .instructions-wrapper h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .instructions-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    color: var(--white);
+  }
+  .instructions-main-img {
+    text-align: center;
+  }
+  @media screen and (max-width: 768px) {
+    .instructions-main {
+      display: block;
+    }
+  }
+  .instructions-main p {
+    text-align: justify;
+  }
+  .instructions-main ol {
+    padding-left: 2rem;
+  }
+  
