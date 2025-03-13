@@ -37,7 +37,7 @@ const SignUp = () => {
     e.preventDefault();
     if (validate()) {
       try {
-        const response = await axios.post("http://localhost:4000/auth/signup", formData, {
+        const response = await axios.post("https://e-seva-backend.onrender.com/auth/signup", formData, {
           headers: { "Content-Type": "application/json" },
           withCredentials: true, // This is necessary to include cookies or authorization headers
         });        
