@@ -46,7 +46,7 @@ const PetrolBooking = () => {
 
     try {
         const response = await axios.post(
-            "http://localhost:4000/bookings/book",
+            "https://e-seva-backend.onrender.com/bookings/book",
             {
                 ...formData,
                 fueltype: formData.fueltype.toLowerCase(), // Convert to lowercase
