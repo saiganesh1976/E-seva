@@ -28,7 +28,7 @@ const Dashboard = () => {
   // Fetch bookings from API
   const fetchBookings = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/bookings/displayBookings");
+      const response = await axios.get("https://e-seva-backend.onrender.com/bookings/displayBookings");
       setBookings(response.data);
       startCountdown(response.data);
     } catch (error) {
