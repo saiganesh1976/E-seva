@@ -28,7 +28,7 @@ const ApplyFastag = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:4000/fasttag/apply", {
+      const response = await axios.post("https://e-seva-backend.onrender.com/fasttag/apply", {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
