@@ -19,9 +19,9 @@ const Police = () => {
       {/* Header Section */}
       <div className="police-header-wrapper">
         <div className="page-header police">
-          <h2>Police Services</h2>
+          <h2 lassName="header-title">Police Services</h2>
           <p>Call Us Now for Emergency Services</p>
-          <button className="general-btn">
+          <button className="submit-btn">
             <a href="tel:100">
               <FaPhoneAlt /> Dial 100
             </a>

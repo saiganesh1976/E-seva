@@ -66,16 +66,13 @@ const Ambulance = () => {
           Call Us Now for Emergency Ambulance Services
         </p>
         <div className="header-buttons">
-          <button className="general-btn">
+          <button className="submit-btn">
             <a href="tel:+91 63052 79018">Dial 108</a>
           </button>
-          <button className="general-btn" onClick={handleButton}>
+          <button className="submit-btn" onClick={handleButton}>
             <a href={nearestHospitalLink} target="_blank" rel="noopener noreferrer">
               Nearest Hospitals
             </a>
-          </button>
-          <button className="general-btn">
-            <Link to="/findHospital">Find Hospital</Link>
           </button>
         </div>
       </header>
@@ -95,7 +92,7 @@ const Ambulance = () => {
               <div className="service-details">
                 <h2>{service.title}</h2>
                 <p>{service.description}</p>
-                <button className="general-btn">
+                <button className="submit-btn">
                   <a href="tel:+91 63052 79018">Call Now</a>
                 </button>
               </div>

@@ -1,0 +1,97 @@
+.booking-container {
+  background: var(--theme);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-form {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  padding: 40px 30px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 2px solid var(--links);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.form-group {
+  flex: 1;
+  min-width: 280px;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-field,
+.select-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border 0.3s ease-in-out;
+}
+.input-field::placeholder {
+  color: #888;
+}
+
+.input-field:focus,
+.select-field:focus {
+  border-color: var(--links);
+  outline: none;
+}
+
+@media (max-width: 992px) {
+  .booking-form {
+    padding: 30px 20px;
+  }
+
+  .row {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-container {
+    width: 100%;
+    padding: 50px 15px;
+  }
+
+  .booking-form {
+    max-width: 95%;
+    padding: 25px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-group {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-form {
+    padding: 20px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+}

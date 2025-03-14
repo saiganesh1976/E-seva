@@ -16,6 +16,10 @@ import Bloodbank from "./Pages/Bloodbank/Bloodbank";
 import Fastag from "./Pages/Fastag/Fastag";
 import Fire from "./Pages/Fire/Fire";
 import FindHospital from "./Pages/FindHospital/FindHospital";
+import PetrolBooking from "./Pages/PetrolBooking/PetrolBooking";
+import NeedBlood from "./Pages/NeedBlood/NeedBlood";
+import ApplyFastag from "./Pages/ApplyFastag/ApplyFastag";
+import FastagRecharge from "./Pages/FastagRecharge/FastagRecharge";
 
 const App = () => {
   return (
@@ -36,7 +40,11 @@ const App = () => {
         <Route path="/fastag" element={<Fastag/>}/>
         <Route path="/fire" element={<Fire/>}/>
         <Route path="/findHospital" element={<FindHospital/>}/>
-
+        <Route path="/petrolBook" element={<PetrolBooking/>}/>
+        <Route path="/bloodATM" element={<NeedBlood/>}/>
+        <Route path="/applyFastag" element={<ApplyFastag/>}/>
+        <Route path="/rechargeFastag" element={<FastagRecharge/>}/>
+      
       </Routes>
       <Footer />
     </>

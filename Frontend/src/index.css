@@ -36,6 +36,21 @@ h1 {
   animation: blinkCursor 1s infinite;
 }
 
+/* Title */
+.header-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Description */
+.header-description {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  max-width: 800px;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
 /* Buttons */
 .submit-btn {
   border: 2px solid var(--links);
@@ -43,6 +58,7 @@ h1 {
   background-color: var(--theme);
   border-radius: 5px;
   cursor: pointer;
+  width: auto;
   text-align: center;
   transition: background-color 0.3s ease-in-out;
 }

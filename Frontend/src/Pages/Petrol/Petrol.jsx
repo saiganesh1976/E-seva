@@ -15,10 +15,10 @@ const Petrol = () => {
       {/* Header Section */}
       <div className="petrol-header-wrapper" style={{ backgroundImage: `url(${petrolBanner})` }}>
         <div className="page-header petrol">
-          <h2>Petrol Services</h2>
+          <h2 lassName="header-title">Petrol Services</h2>
           <p>Call Us Now for Petrol Services</p>
-          <button className="general-btn">
-            <Link to="/petrolbook">Book Now</Link>
+          <button className="submit-btn">
+            <Link to="/petrolBook">Book Now</Link>
           </button>
         </div>
       </div>
@@ -66,8 +66,8 @@ const Petrol = () => {
             <h1>Book Now!</h1>
             <p>Welcome to Online Petrol Delivery Service! To book your petrol
                delivery, please provide the following information.</p>
-            <button className="general-btn">
-              <Link to="/petrolbook">Book Now</Link>
+            <button className="submit-btn">
+              <Link to="/petrolBook">Book Now</Link>
             </button>
           </div>
 
